@@ -15,6 +15,7 @@ export const codes = [
     'ping_tout',
     'send_tout',
     'request_tout',
+    'popup_tout',
     'granted',
     'fs',
     'error',

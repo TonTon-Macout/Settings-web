@@ -518,6 +518,7 @@ export default class Settings {
 
         Config.updateTout = json.update_tout;
         Config.requestTout = json.request_tout;
+        Config.popupTout = json.popup_tout;
         Config.sliderTout = json.send_tout;
         Config.useFS = json.use_fs;
         document.body.style.setProperty('--accent', intToColor(json.color));
