@@ -1,6 +1,6 @@
 export const settings_lang = {
     en: {
-        project: 'Project',
+        project: '',
         powered: 'Powered by',
         remove: 'Remove',
         edit: 'Edit & upload',
@@ -17,7 +17,7 @@ export const settings_lang = {
         dup: "Duplicated widget ID",
     },
     ru: {
-        project: 'Проект',
+        project: '',
         powered: 'Работает на библиотеке',
         remove: 'Удалить',
         edit: 'Редактировать',

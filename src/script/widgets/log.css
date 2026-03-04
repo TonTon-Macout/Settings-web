@@ -5,7 +5,7 @@
     border-radius: 5px;
     font-size: 16px;
     font-family: 'Courier New', Courier, monospace;
-    color: var(--accent);
+    color: var(--font);
     background: var(--back);
     max-height: 300px;
     resize: vertical;
@@ -20,7 +20,7 @@
 }
 
 .log .info {
-    color: var(--font);
+    color: var(--accent);
 }
 
 .log .err {

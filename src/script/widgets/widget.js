@@ -12,6 +12,7 @@ export default class WidgetBase {
         if (makeWidget) {
             EL.makeIn(this, 'div', {
                 class: 'widget',
+                id: 'id_' + data.id,
                 $: 'root',
                 child: makeRow && {
                     class: 'widget_row',
@@ -22,6 +23,9 @@ export default class WidgetBase {
                             children: [
                                 (data.label !== null) && {
                                     class: 'widget_label',
+                                    attrs: data.title_label && data.title_label.trim() !== '' ? {
+                                        'data-tooltip': data.title_label
+                                    } : undefined,
                                     tag: 'label',
                                     text: data.label ?? data.type,
                                 },

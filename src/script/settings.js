@@ -265,6 +265,9 @@ export default class Settings {
         }
 
         if (LS.has('dark') && LS.get('dark')) document.body.classList.add('theme_dark');
+       // LS.has("dark") ? LS.get("dark") && document.body.classList.add("theme_dark") :  (document.body.classList.add("theme_dark"), LS.set("dark", !0));
+       
+
 
         if (LS.has('auth')) this.auth = LS.get('auth');
 
@@ -631,9 +634,9 @@ export default class Settings {
         if (pname) {
             copyr = lang.project + ' ';
             copyr += plink ? `<a style="color: var(--accent)" href="${plink}" target="_blank">${pname}</a>` : `${pname}`;
-            copyr += '. ';
+            copyr += '';
         }
-        copyr += lang.powered + ` <a style="color: var(--accent)" href="https://github.com/GyverLibs/Settings" target="_blank">Settings</a> v${SETTINGS_V}`;
+        copyr += lang.powered + ` <a style="color: var(--accent)" href="https://github.com/GyverLibs/Settings" target="_blank">Settings</a> <a style="color: var(--accent)" href="https://github.com/TonTon-Macout/Settings" target="_blank">Fork</a> v${SETTINGS_V}`;
         this.$footer.innerHTML = copyr;
     }
 

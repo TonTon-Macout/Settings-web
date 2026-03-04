@@ -25,6 +25,7 @@ export const codes = [
     'custom_hash',
 
     'label',
+    'title_label',
     'title',
     'text',
     'value',
