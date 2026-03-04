@@ -264,8 +264,8 @@ export default class Settings {
             LS.set('SETTINGS_V', SETTINGS_V);
         }
 
-        if (LS.has('dark') && LS.get('dark')) document.body.classList.add('theme_dark');
-       // LS.has("dark") ? LS.get("dark") && document.body.classList.add("theme_dark") :  (document.body.classList.add("theme_dark"), LS.set("dark", !0));
+        //if (LS.has('dark') && LS.get('dark')) document.body.classList.add('theme_dark');
+        LS.has("dark") ? LS.get("dark") && document.body.classList.add("theme_dark") :  (document.body.classList.add("theme_dark"), LS.set("dark", !0));
        
 
 
