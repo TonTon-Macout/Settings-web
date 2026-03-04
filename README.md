@@ -1,8 +1,10 @@
 ## Команды
 
+npm run build
+
 npm run dev
 
-npm run build
+
 
 
 #define MODE_VER "1.3.16.1"

@@ -1,5 +1,6 @@
 import { EL } from "@alexgyver/component";
 import './popup.css';
+import { Config } from "../config";
 
 export default function popup(text, error = true) {
     let popup = EL.make('div', {
@@ -10,5 +11,5 @@ export default function popup(text, error = true) {
         text: text,
         parent: document.getElementsByClassName('popup_cont')[0],
     });
-    setTimeout(() => popup.remove(), 8500);
+    setTimeout(() => popup.remove(), Config.popupTout);
 }
