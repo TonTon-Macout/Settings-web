@@ -15,6 +15,7 @@ import WSRequest from './wsrequest';
 import renderInfoRow from './ui/info';
 import { encodeText, FetchQueue, fetchTimeout, hash, httpPost, intToColor, last, LS, waitFrame } from '@alexgyver/utils';
 import { Arrow } from './ui/misc';
+const PACKAGE = require('../../package.json');
 
 const anim_s = '.11s';
 const anim_ms = 100;
@@ -212,6 +213,7 @@ export default class Settings {
                                     renderInfoRow(this, 'Local IP', 'ip_i'),
                                     renderInfoRow(this, 'RSSI', 'rssi_i'),
                                     renderInfoRow(this, 'Firmware', 'fw_i'),
+                                    renderInfoRow(this, 'Mod', 'md_i'),
                                 ]
                             },
                         },
@@ -532,6 +534,7 @@ export default class Settings {
         this.$mac_i.innerText = json.mac;
         this.$ip_i.innerText = json.local_ip;
         this.$fw_i.innerText = json.f_ver ?? '-';
+        this.$md_i.innerText = PACKAGE.mod ?? '-';
 
         this.renderFooter(json.proj_name, json.proj_link);
         if (!json.title) json.title = 'Settings';
@@ -637,7 +640,7 @@ export default class Settings {
             copyr += plink ? `<a style="color: var(--accent)" href="${plink}" target="_blank">${pname}</a>` : `${pname}`;
             copyr += '';
         }
-        copyr += lang.powered + ` <a style="color: var(--accent)" href="https://github.com/GyverLibs/Settings" target="_blank">Settings</a> <a style="color: var(--accent)" href="https://github.com/TonTon-Macout/Settings" target="_blank">Fork</a> v${SETTINGS_V}`;
+        copyr += lang.powered + ` <a style="color: var(--accent)" href="https://github.com/GyverLibs/Settings" target="_blank">Settings</a> <a style="color: var(--accent)" href="https://github.com/TonTon-Macout/Settings" target="_blank">MOD</a> v${SETTINGS_V}`;
         this.$footer.innerHTML = copyr;
     }
 
