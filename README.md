@@ -1,3 +1,12 @@
+## Команды
+
+npm run build
+
+npm run dev
+
+#define MODE_VER "1.3.16.5"
+
+
 # Settings web
 Веб-приложение библиотеки [Settings](https://github.com/GyverLibs/Settings)
 
@@ -16,3 +25,4 @@
 ## Как использовать
 - Кеширование: `index` не кешировать, `js` и `css` кешировать для ускорения загрузки
 - Указать gzip header
+

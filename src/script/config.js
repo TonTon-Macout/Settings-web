@@ -4,4 +4,5 @@ export const Config = {
     updateTout: 2500,
     pingPrd: 2500,
     useFS: true,
+    popupTout: 5000,
 };
