@@ -213,7 +213,7 @@ export default class Settings {
                                     renderInfoRow(this, 'Local IP', 'ip_i'),
                                     renderInfoRow(this, 'RSSI', 'rssi_i'),
                                     renderInfoRow(this, 'Firmware', 'fw_i'),
-                                    renderInfoRow(this, 'Mod', 'md_i'),
+                                    renderInfoRow(this, 'Mod version', 'md_i'),
                                 ]
                             },
                         },
@@ -516,6 +516,10 @@ export default class Settings {
 
     //#region UI
     renderUI(json) {
+        // --- начало перерисовки ---
+        window.settingsUIReady = false;
+        document.dispatchEvent(new CustomEvent('settings-ui-start'));
+
         this.queue.clear();
 
         Config.updateTout = json.update_tout;
@@ -564,6 +568,18 @@ export default class Settings {
         p.style.display = 'block';
         this.$main_col.style.minHeight = p.offsetHeight + 'px';
         this.observe(p);
+
+
+        // --- конец перерисовки ---
+        queueMicrotask(() => {
+            window.settingsUIReady = true;
+            document.dispatchEvent(new CustomEvent('settings-ui-ready', {
+                detail: {
+                    fromCache: this.fromCache,
+                    firstBuild: this.firstBuild
+                }
+            }));
+        });
     }
 
     back() {
