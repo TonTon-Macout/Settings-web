@@ -13,6 +13,9 @@
     user-select: none;
     font-weight: 500;
     font-size: 18px;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
 }
 
 .button:active {
@@ -36,7 +39,7 @@
     padding: 6px;
 }
 
-.group_col>.button:last-child {
+.group_col>:not(.button)+.button:last-child {
     box-shadow: inset 0 3px 5px var(--shadow);
     border-radius: 0 0 10px 10px;
     margin: 0;
