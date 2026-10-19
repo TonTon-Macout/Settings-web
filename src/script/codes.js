@@ -15,6 +15,7 @@ export const codes = [
     'ping_tout',
     'send_tout',
     'request_tout',
+    'popup_tout',
     'granted',
     'fs',
     'error',
@@ -25,6 +26,7 @@ export const codes = [
     'custom_hash',
 
     'label',
+    'title_label',
     'title',
     'text',
     'value',

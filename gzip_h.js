@@ -52,6 +52,7 @@ async function compile() {
 */
 
 #define SETTINGS_VER "${pkg.version}"
+#define MODE_VER "${pkg.mod}"
 `;
 
     function addBin(fname, gzip) {
